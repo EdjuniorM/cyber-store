@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import ProductsService from '../../../data/services/ProductsService';
 import ProductModel from '../../../domain/models/ProductModel';
+import 'bootstrap/dist/css/bootstrap.min.css'; // Importe as classes do Bootstrap
+import { Button } from "react-bootstrap";
 import './ProductsList.css';
 
 const ProductsList = () => {
@@ -27,13 +29,22 @@ const ProductsList = () => {
   };
 
   return (
-    <div>
-      <h2>Products List</h2>
-      <div className="products-list">
+    <div className="container">
+      <h2 className="text-center mt-5 mb-4">Products List</h2>
+      <div className="row">
         {products.map((product, index) => (
-          <div key={index} className="product-card" onClick={() => handleProductClick(product.affiliateLink)}>
-            <img src={product.imageUrl} alt={product.name} />
-            <p>{product.name}</p>
+          <div key={index} className="col-md-4 mb-4">
+            <div className="card" style={{ cursor: 'pointer' }} onClick={() => handleProductClick(product.affiliateLink)}>
+            {/* <div className="card"> */}
+              <img src={product.imageUrl} alt={product.name} className="card-img-top" />
+              <div className="card-body">
+                <p className="card-text text-center">{product.name}</p>
+                {/* Use o componente Button do react-bootstrap */}
+                <Button className="mx-auto d-block" variant="primary" onClick={() => handleProductClick(product.affiliateLink)}>
+                  Ver Detalhes
+                </Button>
+              </div>
+            </div>
           </div>
         ))}
       </div>
