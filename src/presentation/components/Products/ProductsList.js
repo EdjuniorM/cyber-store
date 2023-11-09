@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ProductsService from '../../../data/services/ProductsService';
 import ProductModel from '../../../domain/models/ProductModel';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Importe as classes do Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css'; 
 import { Button } from "react-bootstrap";
 import './ProductsList.css';
 
@@ -27,7 +27,7 @@ const ProductsList = () => {
   const handleProductClick = (affiliateLink) => {
     window.open(affiliateLink, '_blank');
   };
-
+//
   return (
     <div className="container">
       <h2 className="text-center mt-5 mb-4">Products List</h2>
