@@ -33,7 +33,7 @@ const ProductsList = () => {
       <h2 className="text-center mt-5 mb-4">Products List</h2>
       <div className="row">
         {products.map((product, index) => (
-          <div key={index} className="col-md-4 mb-4">
+          <div key={index} className="col-6 col-md-4 mb-4">
             <div className="card" style={{ cursor: 'pointer' }} onClick={() => handleProductClick(product.affiliateLink)}>
             {/* <div className="card"> */}
               <img src={product.imageUrl} alt={product.name} className="card-img-top" />
