@@ -4,7 +4,7 @@ import './AppBar.css';
 
 const AppBar = () => {
   return (
-    <div className="app-bar">
+    <div className="app-bar" >
       <h1>CyberStore</h1>
       <nav>
         <ul>

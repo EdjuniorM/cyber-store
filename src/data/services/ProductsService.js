@@ -1,5 +1,5 @@
 class ProductsService {
-  async getProducts() {
+ static async getProducts() {
     return [
       {
         name: "Placa de video",

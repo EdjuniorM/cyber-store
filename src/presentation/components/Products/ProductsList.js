@@ -40,7 +40,7 @@ const ProductsList = () => {
               <div className="card-body">
                 <p className="card-text text-center">{product.name}</p>
                 {/* Use o componente Button do react-bootstrap */}
-                <Button className="mx-auto d-block" variant="primary" onClick={() => handleProductClick(product.affiliateLink)}>
+                <Button className="d-sm-block d-md-none" variant="primary" onClick={() => handleProductClick(product.affiliateLink)}>
                   Ver Detalhes
                 </Button>
               </div>
