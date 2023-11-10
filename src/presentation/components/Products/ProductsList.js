@@ -11,7 +11,7 @@ const ProductsList = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const productsData = await new ProductsService().getProducts();
+        const productsData = await new ProductsService().getProductsTest();
         const mappedProducts = productsData.map((product, index) => {
           return new ProductModel(product.name, product.imageUrl, product.affiliateLink);
         });
